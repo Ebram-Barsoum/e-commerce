@@ -42,7 +42,7 @@ export default function Register(values) {
       .then((data) => {
         setLoading(false);
         setErrorMsg("");
-        navigator("login");
+        navigator("/e-commerce/login");
 
         console.log(data);
       })
