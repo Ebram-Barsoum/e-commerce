@@ -98,7 +98,7 @@ export default function Login() {
             </p>
           )}
 
-          <Link className="font-sm link" to={"/forget-password"}>
+          <Link className="font-sm link" to={"forget-password"}>
             Forget Password?
           </Link>
           <button
