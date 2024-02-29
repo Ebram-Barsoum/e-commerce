@@ -2,14 +2,13 @@ import React, { useEffect, useState } from "react";
 import { jwtDecode } from "jwt-decode";
 import axios from "axios";
 import Loading from "../Loading/Loading";
-
-const { id: userId } = jwtDecode(localStorage.getItem("userToken"));
+const token = localStorage.getItem("userToken");
 
 export default function AllOrders() {
   const [orders, setOrders] = useState(null);
   const [loading, setLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
-
+  if (token) var { id: userId } = jwtDecode();
   const getOrders = () => {
     setLoading(true);
     axios
