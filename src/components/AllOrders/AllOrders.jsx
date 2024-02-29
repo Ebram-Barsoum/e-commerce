@@ -8,7 +8,7 @@ export default function AllOrders() {
   const [orders, setOrders] = useState(null);
   const [loading, setLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
-  if (token) var { id: userId } = jwtDecode();
+  if (token) var { id: userId } = jwtDecode(token);
   const getOrders = () => {
     setLoading(true);
     axios
