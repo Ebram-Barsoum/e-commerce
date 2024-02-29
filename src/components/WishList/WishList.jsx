@@ -40,7 +40,7 @@ export default function WishList() {
 
   return (
     <div className={`container my-5 py-5 ${style.wishList}`}>
-      {products.map((product) => {
+      {products?.map((product) => {
         return <WishItem product={product} key={product._id} />;
       })}
     </div>

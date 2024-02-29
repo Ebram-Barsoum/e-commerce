@@ -27,7 +27,7 @@ export default function Product({ product }) {
       <div
         className={`product rounded-2 overflow-hidden cursor-pointer ${style.product} border-none`}
       >
-        <Link to={`/productDetails/${product._id}`}>
+        <Link to={`productDetails/${product._id}`}>
           <img
             src={product.imageCover}
             alt={product.description}
