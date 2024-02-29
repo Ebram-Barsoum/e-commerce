@@ -1,7 +1,7 @@
 {
   "name": "e-commerce",
   "version": "0.1.0",
- "homepage": "https://Ebram-Barsoum.github.io/e-commerce",
+ "homepage": "https://ebram-barsoum.github.io/e-commerce",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.3",
