@@ -34,7 +34,7 @@ export default function Login() {
         setUserInfo(data.user);
         localStorage.setItem("userToken", data.token);
         localStorage.setItem("userInfo", JSON.stringify(data.user));
-        navigator("/home");
+        navigator("home");
       })
       .catch(({ response }) => {
         setLoading(false);

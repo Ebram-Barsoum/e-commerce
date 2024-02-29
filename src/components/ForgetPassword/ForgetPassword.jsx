@@ -30,7 +30,7 @@ export default function ForgetPassword() {
       .then(({ data }) => {
         toast.success(data.message);
         setLoading(false);
-        navigate("/verification");
+        navigate("verification");
       })
       .catch(({ response }) => {
         toast.error(response.data.message);
