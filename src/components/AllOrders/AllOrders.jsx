@@ -8,7 +8,9 @@ export default function AllOrders() {
   const [orders, setOrders] = useState(null);
   const [loading, setLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
+
   if (token) var { id: userId } = jwtDecode(token);
+
   const getOrders = () => {
     setLoading(true);
     axios
@@ -38,7 +40,7 @@ export default function AllOrders() {
       className="orders py-5 my-5"
       style={{ backgroundColor: "#edf6f9", padding: "20px" }}
     >
-      {orders.map((order) => {
+      {orders?.map((order) => {
         return (
           <div className="order d-flex flex-column gap-3">
             <Order order={order} key={order._id} />

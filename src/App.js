@@ -19,9 +19,8 @@ import WishList from "./components/WishList/WishList";
 import AllOrders from './components/AllOrders/AllOrders';
 const routes = new createBrowserRouter([
   {
-    path: '', element: <Layout />, children: [
+    path: 'e-commerce', element: <Layout />, children: [
       { index: true, element: <Home /> },
-      { path: 'e-commerce', element: <Home /> },
       { path:'login', element: <Login />},
       { path: 'register', element: <Register /> },
       { path: 'home', element: <Home /> },
