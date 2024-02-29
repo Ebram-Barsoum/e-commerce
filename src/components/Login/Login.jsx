@@ -34,7 +34,7 @@ export default function Login() {
         setUserInfo(data.user);
         localStorage.setItem("userToken", data.token);
         localStorage.setItem("userInfo", JSON.stringify(data.user));
-        navigator("e-commerce/home");
+        navigator("/e-commerce/home");
       })
       .catch(({ response }) => {
         setLoading(false);
@@ -98,7 +98,7 @@ export default function Login() {
             </p>
           )}
 
-          <Link className="font-sm link" to={"forget-password"}>
+          <Link className="font-sm link" to={"/e-commerce/forget-password"}>
             Forget Password?
           </Link>
           <button

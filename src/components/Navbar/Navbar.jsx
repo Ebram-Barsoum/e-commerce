@@ -18,7 +18,7 @@ export default function Navbar() {
 
     localStorage.removeItem("userToken");
     localStorage.removeItem("userInfo");
-    navigate("login");
+    navigate("/e-commerce/login");
   };
 
   return (
