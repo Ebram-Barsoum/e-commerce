@@ -31,7 +31,7 @@ export default function Product({ product }) {
       >
         <Link
           to={`${
-            token
+            token !== null
               ? `/e-commerce/productDetails/${product._id}`
               : "/e-commerce/login"
           }`}

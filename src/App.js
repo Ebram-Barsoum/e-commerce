@@ -30,7 +30,7 @@ const routes = new createBrowserRouter([
       { path: '/e-commerce/brands', element: <Guard><Brands /></Guard> },
       { path: '/e-commerce/cart', element: <Guard><Cart /></Guard> },
       { path: '/e-commerce/wishList', element: <Guard><WishList /></Guard> },
-      { path: '/e-commerce/allorders', element: <Guard><AllOrders /></Guard> },
+      { path: 'allorders', element: <Guard><AllOrders /></Guard> },
 
       { path: '/e-commerce/forget-password', element: <ForgetPassword /> },
       { path: '/e-commerce/verification', element: <Verification /> },
