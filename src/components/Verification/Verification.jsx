@@ -18,7 +18,7 @@ export default function Verification() {
       })
       .then(() => {
         setLoading(false);
-        navigate("reset-password");
+        navigate("/e-commerce/reset-password");
       })
       .catch(({ response }) => {
         toast.error(response.data.message);

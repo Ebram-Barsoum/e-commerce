@@ -26,7 +26,7 @@ export default function ResetPassword() {
       .then(({ data }) => {
         setLoading(false);
         toast.success("Password Reset Successfully");
-        navigate("login");
+        navigate("/e-commerce/login");
       })
       .catch(({ response }) => {
         setLoading(false);
