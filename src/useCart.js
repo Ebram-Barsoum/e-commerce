@@ -42,7 +42,7 @@ export function updateCartItemCount({productId,count}) {
 }
 
 export function cartCheckOut({cartId, shippingAddress}) {
-    return axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=http://localhost:3000`, {
+    return axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=https://ebram-barsoum.github.io/e-commerce`, {
         shippingAddress
     }, {
         headers: {
