@@ -1,0 +1,17 @@
+.cart{
+    background-color: #edf6f9;
+}
+.image{
+    height: 200px !important;
+    width: 150px !important;
+}
+.btn:focus{
+    box-shadow: none !important;
+}
+
+@media(max-width:768px){
+    .emptyCart{
+      width: 100% !important;
+    }
+}
+

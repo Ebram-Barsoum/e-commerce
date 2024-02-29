@@ -1,0 +1,33 @@
+.image{
+    height: 150px;
+}
+
+@media(max-width:600px){
+    .image{
+        width: 150 !important;
+       
+    }
+}
+.product{
+    position: relative;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+.product:hover{
+    box-shadow: 2px 2px 10px 2px #0000003c;
+}
+
+.title{
+    height:40px;
+    overflow: hidden;
+}
+
+.heart{
+    position: absolute;
+    top:8px;
+    right:10px;
+    font-size: 25px;
+}

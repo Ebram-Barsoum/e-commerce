@@ -1,0 +1,12 @@
+.sliderContainer {
+    width: 100%;
+}
+  
+  @media (max-width: 576px) {
+    .sliderContainer {
+      width: 85vw; 
+      margin: 0 auto; 
+     
+    }
+  }
+  
