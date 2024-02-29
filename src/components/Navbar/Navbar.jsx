@@ -49,25 +49,25 @@ export default function Navbar() {
           {user && (
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <NavLink className="nav-link" to="/home">
+                <NavLink className="nav-link" to="home">
                   Home
                 </NavLink>
               </li>
 
               <li className="nav-item">
-                <NavLink className="nav-link" to="/products">
+                <NavLink className="nav-link" to="products">
                   Products
                 </NavLink>
               </li>
 
               <li className="nav-item">
-                <NavLink className="nav-link" to="/categories">
+                <NavLink className="nav-link" to="categories">
                   Categories
                 </NavLink>
               </li>
 
               <li className="nav-item">
-                <NavLink className="nav-link" to="/brands">
+                <NavLink className="nav-link" to="brands">
                   Brands
                 </NavLink>
               </li>
@@ -78,7 +78,7 @@ export default function Navbar() {
             {user ? (
               <>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/wishList">
+                  <NavLink className="nav-link" to="wishList">
                     <i className="fa-regular fa-heart fs-3 text-dark position-relative ">
                       <span className="badge p-2 bg-main position-absolute top-0 start-100 translate-middle-y">
                         {wishData?.data?.count}
@@ -88,7 +88,7 @@ export default function Navbar() {
                 </li>
 
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/cart">
+                  <NavLink className="nav-link" to="cart">
                     <i className="fa-solid fa-cart-plus fs-4 text-dark position-relative ">
                       <span className="badge p-2 bg-main position-absolute top-0 start-100 translate-middle-y">
                         {cartData?.data?.numOfCartItems}
@@ -113,13 +113,13 @@ export default function Navbar() {
             ) : (
               <>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/register">
+                  <NavLink className="nav-link" to="register">
                     Register
                   </NavLink>
                 </li>
 
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/login">
+                  <NavLink className="nav-link" to="login">
                     Login
                   </NavLink>
                 </li>
