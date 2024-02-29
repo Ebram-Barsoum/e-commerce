@@ -21,20 +21,20 @@ const routes = new createBrowserRouter([
   {
     path: 'e-commerce', element: <Layout />, children: [
       { index: true, element: <Home /> },
-      { path:'login', element: <Login />},
-      { path: 'register', element: <Register /> },
-      { path: 'home', element: <Home /> },
-      { path: 'products', element: <Guard><Products /></Guard> },
-      { path: 'productDetails/:id', element: <Guard><ProductDetails /></Guard> },
-      { path: 'categories', element: <Guard><Categories /></Guard> },
-      { path: 'brands', element: <Guard><Brands /></Guard> },
-      { path: 'cart', element: <Guard><Cart /></Guard> },
-      { path: 'wishList', element: <Guard><WishList /></Guard> },
-      { path: 'allorders', element: <Guard><AllOrders /></Guard> },
+      { path:'/e-commerce/login', element: <Login />},
+      { path: '/e-commerce/register', element: <Register /> },
+      { path: '/e-commerce/home', element: <Home /> },
+      { path: '/e-commerce/products', element: <Guard><Products /></Guard> },
+      { path: '/e-commerce/productDetails/:id', element: <Guard><ProductDetails /></Guard> },
+      { path: '/e-commerce/categories', element: <Guard><Categories /></Guard> },
+      { path: '/e-commerce/brands', element: <Guard><Brands /></Guard> },
+      { path: '/e-commerce/cart', element: <Guard><Cart /></Guard> },
+      { path: '/e-commerce/wishList', element: <Guard><WishList /></Guard> },
+      { path: '/e-commerce/allorders', element: <Guard><AllOrders /></Guard> },
 
-      { path: 'forget-password', element: <ForgetPassword /> },
-      { path: 'verification', element: <Verification /> },
-      { path: 'reset-password', element: <ResetPassword /> },
+      { path: '/e-commerce/forget-password', element: <ForgetPassword /> },
+      { path: '/e-commerce/verification', element: <Verification /> },
+      { path: '/e-commerce/reset-password', element: <ResetPassword /> },
       { path: '*', element: <Notfound /> },
     ]
   }

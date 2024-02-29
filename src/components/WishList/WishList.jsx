@@ -20,7 +20,11 @@ export default function WishList() {
   if (isLoading) return <Loading></Loading>;
 
   if (isError)
-    return <div className="container my-5 py-5">{error.message}</div>;
+    return (
+      <div className="container alert alert-danger my-5 py-5">
+        {error.message}
+      </div>
+    );
 
   //console.log(data?.data);
   const products = data?.data?.data;
