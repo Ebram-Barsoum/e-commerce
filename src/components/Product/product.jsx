@@ -9,8 +9,6 @@ import {
 } from "../../useWhishList";
 import toast from "react-hot-toast";
 
-const token = window.localStorage.getItem("userToken");
-
 export default function Product({ product }) {
   const { mutate: mutateCart } = useCart(addToCart);
   const { mutate: mutateWish } = useWhishList(addToWish);
@@ -29,13 +27,7 @@ export default function Product({ product }) {
       <div
         className={`product rounded-2 overflow-hidden cursor-pointer ${style.product} border-none`}
       >
-        <Link
-          to={`${
-            token !== null
-              ? `/e-commerce/productDetails/${product._id}`
-              : "/e-commerce/login"
-          }`}
-        >
+        <Link to={`/e-commerce/productDetails/${product._id}`}>
           <img
             src={product.imageCover}
             alt={product.description}
