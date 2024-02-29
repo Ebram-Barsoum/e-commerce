@@ -35,7 +35,7 @@ const routes = new createBrowserRouter([
       { path: '/e-commerce/forget-password', element: <ForgetPassword /> },
       { path: '/e-commerce/verification', element: <Verification /> },
       { path: '/e-commerce/reset-password', element: <ResetPassword /> },
-      { path: '*', element: <Notfound /> },
+      { path: '/e-commerce/*', element: <Notfound /> },
     ]
   }
 ]);
