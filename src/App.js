@@ -21,20 +21,20 @@ const routes = new createBrowserRouter([
   {
     path: 'e-commerce', element: <Layout />, children: [
       { index: true, element: <Home /> },
-      { path:'login', element: <Login />},
-      { path: 'register', element: <Register /> },
-      { path: 'home', element: <Home /> },
-      { path: 'products', element: <Guard><Products /></Guard> },
-      { path: 'productDetails/:id', element: <Guard><ProductDetails /></Guard> },
-      { path: 'categories', element: <Guard><Categories /></Guard> },
-      { path: 'brands', element: <Guard><Brands /></Guard> },
-      { path: 'cart', element: <Guard><Cart /></Guard> },
-      { path: 'wishList', element: <Guard><WishList /></Guard> },
-      { path: 'allorders', element: <Guard><AllOrders /></Guard> },
+      { path:'/login', element: <Login />},
+      { path: '/register', element: <Register /> },
+      { path: '/home', element: <Home /> },
+      { path: '/products', element: <Guard><Products /></Guard> },
+      { path: '/productDetails/:id', element: <Guard><ProductDetails /></Guard> },
+      { path: '/categories', element: <Guard><Categories /></Guard> },
+      { path: '/brands', element: <Guard><Brands /></Guard> },
+      { path: '/cart', element: <Guard><Cart /></Guard> },
+      { path: '/wishList', element: <Guard><WishList /></Guard> },
+      { path: '/allorders', element: <Guard><AllOrders /></Guard> },
 
-      { path: 'forget-password', element: <ForgetPassword /> },
-      { path: 'verification', element: <Verification /> },
-      { path: 'reset-password', element: <ResetPassword /> },
+      { path: '/forget-password', element: <ForgetPassword /> },
+      { path: '/verification', element: <Verification /> },
+      { path: '/reset-password', element: <ResetPassword /> },
       { path: '*', element: <Notfound /> },
     ]
   }
