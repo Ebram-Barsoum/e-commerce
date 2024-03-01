@@ -71,6 +71,12 @@ export default function Navbar() {
                   Brands
                 </NavLink>
               </li>
+
+              <li className="nav-item">
+                <NavLink className="nav-link" to="allorders">
+                  Orders
+                </NavLink>
+              </li>
             </ul>
           )}
 
