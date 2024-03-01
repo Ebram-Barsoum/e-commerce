@@ -1,49 +1,38 @@
-import React, { useEffect, useState } from "react";
 import { jwtDecode } from "jwt-decode";
 import axios from "axios";
 import Loading from "../Loading/Loading";
-const token = localStorage.getItem("userToken");
+import { useQuery } from "@tanstack/react-query";
 
 export default function AllOrders() {
-  const [orders, setOrders] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [errorMsg, setErrorMsg] = useState("");
-
+  const token = localStorage.getItem("userToken");
   if (token) var { id: userId } = jwtDecode(token);
 
   const getOrders = () => {
-    setLoading(true);
-    axios
-      .get(`https://ecommerce.routemisr.com/api/v1/orders/user/${userId}`)
-      .then(({ data }) => {
-        setLoading(false);
-        setOrders(data);
-        setErrorMsg("");
-      })
-      .catch(({ error }) => {
-        setErrorMsg(error.message);
-        setLoading(false);
-      });
+    return axios.get(
+      `https://ecommerce.routemisr.com/api/v1/orders/user/${userId}`
+    );
   };
 
-  useEffect(() => {
-    getOrders();
-  }, []);
+  const { data, isError, isLoading, error } = useQuery({
+    queryKey: ["orders"],
+    queryFn: getOrders,
+  });
 
-  if (loading) return <Loading />;
+  if (isLoading) return <Loading />;
 
-  if (errorMsg)
-    return <div className="alert alert-danger py-5 my-5">{errorMsg}</div>;
+  if (isError)
+    return <div className="alert alert-danger py-5 my-5">{error.message}</div>;
 
+  console.log(data);
   return (
     <div
       className="orders py-5 my-5"
       style={{ backgroundColor: "#edf6f9", padding: "20px" }}
     >
-      {orders?.map((order) => {
+      {data?.data?.map((order) => {
         return (
-          <div className="order d-flex flex-column gap-3">
-            <Order order={order} key={order._id} />
+          <div className="order d-flex flex-column gap-3" key={order._id}>
+            <Order order={order} />
             <div className="fw-bold fst-italic ">
               Purchased at {new Date(order.paidAt).toLocaleDateString()}
             </div>
@@ -56,9 +45,9 @@ export default function AllOrders() {
 }
 
 function Order({ order }) {
-  return order.cartItems.map((item) => {
+  return order?.cartItems.map((item) => {
     return (
-      <div className="row align-items-center gy-3">
+      <div className="row align-items-center gy-3" key={item._id}>
         <div className="col-12 col-sm-4 col-md-2">
           <img
             src={item.product.imageCover}

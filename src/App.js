@@ -31,7 +31,6 @@ const routes = new createBrowserRouter([
       { path: '/e-commerce/cart', element: <Guard><Cart /></Guard> },
       { path: '/e-commerce/wishList', element: <Guard><WishList /></Guard> },
       { path: '/e-commerce/allorders', element: <Guard><AllOrders /></Guard> },
-
       { path: '/e-commerce/forget-password', element: <ForgetPassword /> },
       { path: '/e-commerce/verification', element: <Verification /> },
       { path: '/e-commerce/reset-password', element: <ResetPassword /> },
