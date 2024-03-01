@@ -19,7 +19,7 @@ import WishList from "./components/WishList/WishList";
 import AllOrders from './components/AllOrders/AllOrders';
 const routes = new createBrowserRouter([
   {
-    path: 'e-commerce', element: <Layout />, children: [
+    path: '/e-commerce', element: <Layout />, children: [
       { index: true, element: <Home /> },
       { path:'/e-commerce/login', element: <Login />},
       { path: '/e-commerce/register', element: <Register /> },
@@ -35,7 +35,7 @@ const routes = new createBrowserRouter([
       { path: '/e-commerce/forget-password', element: <ForgetPassword /> },
       { path: '/e-commerce/verification', element: <Verification /> },
       { path: '/e-commerce/reset-password', element: <ResetPassword /> },
-      { path: '/e-commerce/*', element: <Notfound /> },
+      { path: '*', element: <Notfound /> },
     ]
   }
 ]);
